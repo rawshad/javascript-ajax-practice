@@ -1,28 +1,51 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asynchronous Javascript</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Simple CRUD App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+        }
+        .book-list {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .book-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .book-item span {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
-    <p class="p"></p>
-    <main class="container">
-        <div class="countries">
-            <article class="country">
-                <img src="" alt="" class="country_img">
-                <div class="country_data">
-                    <div class="country_data">
-                        <h4 class="country_name"></h4>
-                        <p class="country_populaton"></p>
-                        <p class="country_currency"></p>
-                    </div>
-                </div>
-            </article>
-        </div>
-        <button class="btn-country">Where am I?</button>
-    </main>
+    <div class="container">
+        <h1>Book Management</h1>
+        <form id="book-form">
+            <input type="hidden" id="book-id">
+            <input type="text" id="title" placeholder="Title" required>
+            <input type="text" id="author" placeholder="Author" required>
+            <button type="submit">Add Book</button>
+        </form>
+        <div class="book-list" id="book-list"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
+
